@@ -1,0 +1,14 @@
+Copyright (c) 2026 messor1053. All rights reserved.
+
+Hundred Twenty is proprietary, closed-source software. You may download and
+use the released binaries for personal use. You may not copy, modify,
+redistribute, sell, decompile, reverse engineer or create derivative works of
+the software, in whole or in part, without prior written permission from the
+copyright holder.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY ARISING FROM THE USE OF THE SOFTWARE.
+
+Hundred Twenty bundles FFmpeg (https://ffmpeg.org), which is licensed
+separately under the GPL. FFmpeg is not covered by this license.
