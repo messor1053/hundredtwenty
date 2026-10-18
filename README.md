@@ -18,11 +18,11 @@ Hundred Twenty takes any edit, encodes it at a true 120fps with FFmpeg and preps
 ## Features
 
 - **Drop and export.** Drag in an MP4, MOV, MKV or WEBM, then hit Export.
-- **120 Method.** Encodes constant 120fps, then patches the MP4 headers so TikTok's transcoder keeps every frame. Based on [ut0ku/120fps-method](https://github.com/ut0ku/120fps-method).
-- **120 Itsscale.** The classic FFmpeg `-itsscale` version, built in too.
+- **120 Studio.** Encodes true 120fps and writes the file so TikTok serves your original upload untouched. Tested on a public post: 120fps, every frame.
+- **Experimental methods.** Pass (CompressBase-style), Method (based on [ut0ku/120fps-method](https://github.com/ut0ku/120fps-method)) and Itsscale.
 - **60 Clean.** Plain 1080p60 for when you just want it to look right everywhere.
 - **GPU encoding.** NVIDIA NVENC at its highest-quality preset, with a CPU (x264) fallback.
-- **Tuned settings.** 1080×1920, H.264 High, 30 Mbps, 1-second GOP, BT.709, AAC 320k. A bitrate slider is there if you want more.
+- **Tuned settings.** 120 Studio uses 1080×1920, H.264 Constrained Baseline L5.1, ~12 Mbps, AAC. A bitrate slider is there if you want more.
 - **Motion interpolation.** Builds real in-between frames for clips under 120fps.
 - **One-click TikTok.** Opens TikTok Studio in your browser with the caption already copied.
 
@@ -48,9 +48,9 @@ Black and white, rounded and smooth. Every card tilts in 3D toward your cursor w
 ## How to post at 120fps
 
 1. Export a **120fps** edit from your editor (After Effects, Premiere, CapCut…).
-2. Drop it into Hundred Twenty, keep **120 Method**, hit **Export**.
+2. Drop it into Hundred Twenty, keep **120 Studio**, hit **Export**.
 3. Click **Open TikTok**. Drag the file in, press **Ctrl+V** for the caption, then **Post**.
-4. Watch it in the TikTok **phone app** on a 120 Hz screen. Desktop playback may look slowed, which is normal for this method.
+4. Watch it on a 120 Hz phone. TikTok serves the original file, so give it a few minutes after posting while TikTok checks it.
 
 ## Requirements
 
