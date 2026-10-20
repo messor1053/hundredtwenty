@@ -25,10 +25,11 @@ Hundred Twenty takes any edit, encodes it at a true 120fps with FFmpeg and preps
 - **Tuned settings.** 120 Studio uses 1080×1920, H.264 Constrained Baseline L5.1, ~12 Mbps, AAC. A bitrate slider is there if you want more.
 - **Motion interpolation.** Builds real in-between frames for clips under 120fps.
 - **One-click TikTok.** Opens TikTok Studio in your browser with the caption already copied.
+- **Automatic updates.** New versions download in the background and install on restart. No more redownloading.
 
 ## Design
 
-Black and white, rounded and smooth. Every card tilts in 3D toward your cursor with glare and depth. Spring animations, a live 9:16 preview, a progress ring, sound on every click, and five cursor themes.
+Black and white, rounded and smooth, or pick a look: Midnight, Graphite, Aurora or Light, with nine accent colours. Every card tilts in 3D toward your cursor with glare and depth. Spring animations, a live 9:16 preview, a progress ring, sound on every click, and five cursor themes.
 
 <p align="center">
   <img src="screenshots/3-exporting.png" width="49%" alt="Exporting" />
@@ -42,8 +43,10 @@ Black and white, rounded and smooth. Every card tilts in 3D toward your cursor w
 ## Install
 
 1. Go to [Releases](../../releases/latest).
-2. Download **HundredTwenty-Setup-1.0.0.exe** (installer) or **HundredTwenty-1.0.0-portable.exe** (no install).
+2. Download **HundredTwenty-Setup-1.1.0.exe** (installer) or **HundredTwenty-1.1.0-portable.exe** (no install).
 3. Windows may show "Windows protected your PC" because the app isn't code-signed. Click **More info → Run anyway**.
+
+**On 1.0.0?** Run the 1.1.0 installer. It closes the app, removes 1.0.0 and keeps your settings. From 1.1.0 on, updates install themselves. See the [changelog](CHANGELOG.md).
 
 ## How to post at 120fps
 
@@ -56,6 +59,10 @@ Black and white, rounded and smooth. Every card tilts in 3D toward your cursor w
 
 - Windows 10 or 11 (64-bit)
 - NVIDIA GPU recommended (any CPU works with x264)
+
+## Privacy
+
+Hundred Twenty sends anonymous usage stats: a random install ID, the app version, your Windows version, the export mode you used and your country (worked out by the server; your IP address is never stored). It never sends files, file names or account details. Turn it off in Settings → Privacy.
 
 ## Notes
 
