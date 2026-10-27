@@ -1,5 +1,30 @@
 # Changelog
 
+## 1.2.0 · October 27, 2026
+
+**On 1.1.0 this installs itself.** It downloads in the background, then the title bar shows **Update ready · Restart**. Still on 1.0.0? Run the 1.2.0 installer once.
+
+### New
+
+- **Four layouts.** Pick one in Settings → Layout:
+  - **Classic**: the preview on the left and every setting on the right, like before.
+  - **Steps**: one step at a time (Video, Method, Quality, Export) with Back and Next.
+  - **Pro**: tabs in a sidebar, the preview in the middle, an inspector on the right and a status bar along the bottom.
+  - **Bento**: every control is its own tile, with a big bitrate readout and an Export tile.
+- **Four styles.** Pick one in Settings → Style: **Clean** (like before), **Glass** (frosted panels over soft colour), **Terminal** (monospace, square corners, scanlines) or **Neon** (glow, gradients and a grid horizon). Every style works with every theme and accent colour.
+- **Output summary.** Steps, Pro and Bento show what your export will be before you hit Export: method, frame size, bitrate, frame rate, encoder and an estimated file size.
+- **4K export (Risky).** An opt-in switch for Studio. A source bigger than 1080p keeps up to 2160p at 45 Mbps. It passed its first test (TikTok served it at 2160p, 120 fps), but it's new, so it's off by default and marked Risky.
+- **Number keys.** Jump between steps in Steps and between tabs in Pro.
+
+### Improved
+
+- **Sharper Studio exports.** A slower, better-tuned encode at the same 12 Mbps. On a 4K test clip, quality went from 34.7 to 42.4 dB (PSNR), and SSIM from 0.942 to 0.983.
+
+### Fixed
+
+- **Mushy exports from 4K sources.** Original framing sent 4K sources through at a 1080p bitrate. They're now scaled down sharply to TikTok's 1080p.
+- **Exporting an export.** You now get a warning, since it lowers quality, and the file name no longer stacks up "_tiktok_120fps".
+
 ## 1.1.0 · October 20, 2026
 
 **Reinstall once.** 1.0.0 can't update itself, so download 1.1.0 and run the installer. It closes Hundred Twenty if it's open, removes 1.0.0 and keeps your settings. After this, updates install themselves.

@@ -23,13 +23,15 @@ Hundred Twenty takes any edit, encodes it at a true 120fps with FFmpeg and preps
 - **60 Clean.** Plain 1080p60 for when you just want it to look right everywhere.
 - **GPU encoding.** NVIDIA NVENC at its highest-quality preset, with a CPU (x264) fallback.
 - **Tuned settings.** 120 Studio uses 1080×1920, H.264 Constrained Baseline L5.1, ~12 Mbps, AAC. A bitrate slider is there if you want more.
+- **4K export (Risky).** Opt-in for Studio: a source bigger than 1080p keeps up to 2160p at 45 Mbps. It passed its first TikTok test, but it's new, so it's off by default.
+- **Output summary.** See the frame size, bitrate, encoder and an estimated file size before you export.
 - **Motion interpolation.** Builds real in-between frames for clips under 120fps.
 - **One-click TikTok.** Opens TikTok Studio in your browser with the caption already copied.
 - **Automatic updates.** New versions download in the background and install on restart. No more redownloading.
 
 ## Design
 
-Black and white, rounded and smooth, or pick a look: Midnight, Graphite, Aurora or Light, with nine accent colours. Every card tilts in 3D toward your cursor with glare and depth. Spring animations, a live 9:16 preview, a progress ring, sound on every click, and five cursor themes.
+Make it yours. Pick a layout: **Classic**, **Steps** (one step at a time), **Pro** (sidebar, inspector and status bar) or **Bento** (every control its own tile). Pick a style: **Clean**, **Glass**, **Terminal** or **Neon**. Then a theme (Midnight, Graphite, Aurora or Light) and one of nine accent colours. Every card tilts in 3D toward your cursor with glare and depth. Spring animations, a live 9:16 preview, a progress ring, sound on every click, and five cursor themes.
 
 <p align="center">
   <img src="screenshots/3-exporting.png" width="49%" alt="Exporting" />
@@ -43,10 +45,10 @@ Black and white, rounded and smooth, or pick a look: Midnight, Graphite, Aurora 
 ## Install
 
 1. Go to [Releases](../../releases/latest).
-2. Download **HundredTwenty-Setup-1.1.0.exe** (installer) or **HundredTwenty-1.1.0-portable.exe** (no install).
+2. Download **HundredTwenty-Setup-1.2.0.exe** (installer) or **HundredTwenty-1.2.0-portable.exe** (no install).
 3. Windows may show "Windows protected your PC" because the app isn't code-signed. Click **More info → Run anyway**.
 
-**On 1.0.0?** Run the 1.1.0 installer. It closes the app, removes 1.0.0 and keeps your settings. From 1.1.0 on, updates install themselves. See the [changelog](CHANGELOG.md).
+**Already installed?** 1.1.0 updates itself to 1.2.0: restart when the title bar says **Update ready**. On 1.0.0, run the 1.2.0 installer once. It closes the app, removes 1.0.0 and keeps your settings. See the [changelog](CHANGELOG.md).
 
 ## How to post at 120fps
 
