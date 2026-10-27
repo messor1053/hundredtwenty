@@ -23,7 +23,7 @@ Hundred Twenty takes any edit, encodes it at a true 120fps with FFmpeg and preps
 - **60 Clean.** Plain 1080p60 for when you just want it to look right everywhere.
 - **GPU encoding.** NVIDIA NVENC at its highest-quality preset, with a CPU (x264) fallback.
 - **Tuned settings.** 120 Studio uses 1080×1920, H.264 Constrained Baseline L5.1, ~12 Mbps, AAC. A bitrate slider is there if you want more.
-- **4K export (Risky).** Opt-in for Studio: a source bigger than 1080p keeps up to 2160p at 45 Mbps. It passed its first TikTok test, but it's new, so it's off by default.
+- **2K and 4K.** Studio can keep a source bigger than 1080p sharper: **2K** (1440p, about 22 Mbps) works on TikTok right now; **4K** (2160p) is marked Risky and is patched right now. 1080p stays the default.
 - **Output summary.** See the frame size, bitrate, encoder and an estimated file size before you export.
 - **Motion interpolation.** Builds real in-between frames for clips under 120fps.
 - **One-click TikTok.** Opens TikTok Studio in your browser with the caption already copied.
@@ -61,6 +61,21 @@ Make it yours. Pick a layout: **Classic**, **Steps** (one step at a time), **Pro
 
 - Windows 10 or 11 (64-bit)
 - NVIDIA GPU recommended (any CPU works with x264)
+
+## Built with
+
+![JavaScript 54.7%](https://img.shields.io/badge/JavaScript-54.7%25-f1e05a?style=flat-square&logo=javascript&logoColor=black)
+![CSS 32.9%](https://img.shields.io/badge/CSS-32.9%25-663399?style=flat-square&logo=css&logoColor=white)
+![HTML 11.3%](https://img.shields.io/badge/HTML-11.3%25-e34c26?style=flat-square&logo=html5&logoColor=white)
+![SQL 0.5%](https://img.shields.io/badge/SQL-0.5%25-e38c00?style=flat-square)
+![Other 0.7%](https://img.shields.io/badge/Other-0.7%25-555555?style=flat-square)
+
+- **JavaScript** on **Electron** and **Node.js** runs the app, and a **Cloudflare Worker** handles the signed updates and anonymous stats.
+- **HTML** and **CSS** draw the interface: every layout, style and theme.
+- **FFmpeg** (x264 + AAC) does the encoding.
+- **SQL** defines the stats tables in Cloudflare D1. Other is the Windows installer script (NSIS), a batch launcher and a VBScript starter.
+
+The source code is private, so GitHub's language bar stays empty here. These shares are measured from it.
 
 ## Privacy
 

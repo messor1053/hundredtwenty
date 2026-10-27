@@ -6,6 +6,7 @@
 
 ### New
 
+- **2K export.** A **Resolution** choice sits with Audio in the export options: **1080p** (the long-proven default), **2K** or **4K**. 2K keeps sources bigger than 1080p at up to 1440p (about 22 Mbps) and works on TikTok right now. 4K (2160p, 45 Mbps) is marked Risky and is patched on TikTok right now.
 - **Four layouts.** Pick one in Settings → Layout:
   - **Classic**: the preview on the left and every setting on the right, like before.
   - **Steps**: one step at a time (Video, Method, Quality, Export) with Back and Next.
@@ -13,7 +14,6 @@
   - **Bento**: every control is its own tile, with a big bitrate readout and an Export tile.
 - **Four styles.** Pick one in Settings → Style: **Clean** (like before), **Glass** (frosted panels over soft colour), **Terminal** (monospace, square corners, scanlines) or **Neon** (glow, gradients and a grid horizon). Every style works with every theme and accent colour.
 - **Output summary.** Steps, Pro and Bento show what your export will be before you hit Export: method, frame size, bitrate, frame rate, encoder and an estimated file size.
-- **4K export (Risky).** An opt-in switch for Studio. A source bigger than 1080p keeps up to 2160p at 45 Mbps. It passed its first test (TikTok served it at 2160p, 120 fps), but it's new, so it's off by default and marked Risky.
 - **Number keys.** Jump between steps in Steps and between tabs in Pro.
 
 ### Improved
