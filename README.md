@@ -13,23 +13,25 @@
   <img src="screenshots/2-loaded.png" width="820" alt="Hundred Twenty with a video loaded" />
 </p>
 
-Hundred Twenty takes any edit, encodes it at a true 120fps with FFmpeg and preps it for TikTok's 120fps upload method. You don't touch the command line, patch anything by hand or guess settings.
+Hundred Twenty takes any edit, encodes it with FFmpeg and preps it for TikTok. You don't touch the command line, patch anything by hand or guess settings.
 
 ## Features
 
 - **Drop and export.** Drag in an MP4, MOV, MKV or WEBM, then hit Export.
-- **Patch method (temporary).** TikTok changed how it processes uploads on November 3 and the old 120fps methods stopped working. Patch exports at 120fps, then stretches the file's timing so TikTok keeps every frame. The file plays slowed on PC, that is expected. It's temporary until we have a fix.
-- **Studio (maintenance).** The original 120 Studio method is grayed out until it works on TikTok again.
+- **Halftime (the default).** TikTok changed how it processes uploads on November 3: it re-encodes everything and plays it at 60 fps at most. Halftime keeps every one of your 120fps frames at 1080p by playing the edit at half speed, so it's smooth 60 fps slow motion at twice the length. Tested on TikTok: 1080p, 60 fps, every frame kept.
+- **60 fps.** Normal speed at 1080p 60 fps. A 120fps edit keeps every 2nd frame, so motion stays even.
+- **Studio (maintenance).** The original 120 Studio method needs TikTok to keep the original file, which it stopped doing on November 3. It's grayed out until that works again. Right now TikTok drops every 2nd frame of a Studio export, while Halftime keeps them all.
 - **Tuned settings.** 1080×1920 H.264 at about 12 Mbps with AAC audio. A bitrate slider is there if you want more.
-- **2K and 4K.** Keep a source bigger than 1080p sharper: **2K** (1440p, about 22 Mbps) or **4K** (2160p, marked Risky). 1080p stays the default.
+- **1080p.** TikTok shows uploads at up to 1080p right now. 2K and 4K exports are still there for sources bigger than 1080p, but TikTok scales them down to 1080p.
 - **Output summary.** See the frame size, bitrate, encoder and an estimated file size before you export.
 - **Motion interpolation.** Builds real in-between frames for clips under 120fps.
 - **One-click TikTok.** Opens TikTok Studio in your browser with the caption already copied.
+- **Keyboard shortcuts.** **Ctrl+O** to open, **Ctrl+E** to export, **Ctrl+,** for settings.
 - **Automatic updates.** New versions download in the background and install on restart. No more redownloading.
 
 ## Design
 
-Make it yours. Pick a layout: **Classic**, **Steps** (one step at a time), **Pro** (sidebar, inspector and status bar) or **Bento** (every control its own tile). Pick a style: **Clean**, **Glass**, **Terminal** or **Neon**. Then a theme (Midnight, Graphite, Aurora or Light) and one of nine accent colours. Every card tilts in 3D toward your cursor with glare and depth. Spring animations, a live 9:16 preview, a progress ring, sound on every click, and five cursor themes.
+Make it yours. Pick a layout: **Classic**, **Steps** (one step at a time), **Pro** (sidebar, inspector and status bar) or **Bento** (every control its own tile). Pick one of 14 styles: **Clean**, **Glass**, **Terminal**, **Neon**, **Luxe** (black and gold), **Prism** (iridescent borders), **Chrome** (brushed metal), **Soft** (raised and pressed), **Clay** (puffy and rounded), **Paper** (warm stock and serif type), **Blueprint** (drafting grid), **HUD** (sci-fi brackets), **Brutal** (thick ink and hard shadows) or **Swiss** (grotesk type and rules), or hit **Surprise me**. Then a theme (Midnight, Graphite, Aurora or Light) and one of nine accent colours. Every card tilts in 3D toward your cursor with glare and depth. Spring animations, a live 9:16 preview, a progress ring, sound on every click, and five cursor themes.
 
 <p align="center">
   <img src="screenshots/3-exporting.png" width="49%" alt="Exporting" />
@@ -46,14 +48,14 @@ Make it yours. Pick a layout: **Classic**, **Steps** (one step at a time), **Pro
 2. Download **HundredTwenty-Setup-1.2.0.exe** (installer) or **HundredTwenty-1.2.0-portable.exe** (no install).
 3. Windows may show "Windows protected your PC" because the app isn't code-signed. Click **More info → Run anyway**.
 
-**Already installed?** 1.1.0 and later update themselves to 1.3.0: restart when the title bar says **Update ready**. On 1.0.0, run the 1.2.0 installer once. It closes the app, removes 1.0.0 and keeps your settings. See the [changelog](CHANGELOG.md).
+**Already installed?** 1.1.0 and later update themselves to 1.4.0: restart when the title bar says **Update ready**. On 1.0.0, run the 1.2.0 installer once. It closes the app, removes 1.0.0 and keeps your settings. See the [changelog](CHANGELOG.md).
 
 ## How to post at 120fps
 
 1. Export a **120fps** edit from your editor (After Effects, Premiere, CapCut…).
-2. Drop it into Hundred Twenty, keep **Patch**, hit **Export**. The exported file plays slowed on PC, that is expected. Don't re-export it.
+2. Drop it into Hundred Twenty, keep **Halftime** (or pick **60 fps** for normal speed), hit **Export**. Don't re-export the file.
 3. Click **Open TikTok**. Drag the file in, press **Ctrl+V** for the caption, then **Post**.
-4. Give it a few minutes after posting while TikTok processes it. Patch is temporary while we work on a fix for TikTok's change.
+4. TikTok shows 540p for the first 10 to 20 minutes, then switches to 1080p 60.
 
 ## Requirements
 
