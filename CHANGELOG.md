@@ -8,7 +8,7 @@ On November 3 TikTok changed how it processes uploads. It now re-encodes every v
 
 ### New
 
-- **Halftime method.** The new default, marked with the star. It keeps every one of your 120 fps frames at 1080p. TikTok plays at most 60 fps, so Halftime plays your edit at half speed: smooth 60 fps slow motion at twice the length. A 20 second edit becomes 40 seconds, not 2 minutes like the old Patch. The audio is slowed to match. Tested on TikTok: 1080p, 60 fps, every frame kept.
+- **Halftime method.** The new default, marked with the star. It builds your edit at 120 fps and blends each pair of frames into one 60 fps frame, at normal speed and 1080p. Every frame counts, and motion looks smoother than when half the frames are dropped. Your speed and audio stay exactly as you edited them.
 - **60 fps method.** Normal speed at 1080p 60 fps. A 120 fps edit keeps every 2nd frame, so motion stays perfectly even.
 - **Ten new styles.** Luxe, Prism, Chrome, Soft, Clay, Paper, Blueprint, HUD, Brutal and Swiss, plus **Surprise me** for a random style and accent. That makes 14 styles, and every one works with every layout, theme and accent.
 - **Premium touches.** A short launch intro, subtle film grain, keyboard focus rings and toasts with a timer bar. There are also keyboard shortcuts, listed in Settings: **Ctrl+O** to open, **Ctrl+E** to export and **Ctrl+,** for settings.
@@ -17,12 +17,12 @@ With both methods, TikTok shows 540p for the first 10 to 20 minutes after postin
 
 ### Halftime vs Studio right now
 
-Since November 3, TikTok re-encodes a Studio export like any other upload. It shows 540p first, then 1080p 60 with every 2nd frame dropped. Halftime gets the same 1080p 60 and keeps all 120 frames. Studio comes back as soon as TikTok lets 120 fps through again.
+Since November 3, TikTok re-encodes a Studio export like any other upload. It shows 540p first, then 1080p 60 with every 2nd frame dropped. Halftime gets the same 1080p 60 but uses all 120 frames, blended in pairs. Studio comes back as soon as TikTok lets 120 fps through again.
 
-### Fixed (hot update 1.4.1)
+### Fixed (hot updates 1.4.1 and 1.4.2)
 
-- **Halftime audio stays in sync.** The audio slowdown came out about 0.2% short, so the sound slowly ran ahead of the picture: about 45 ms by the end of a 24 second export, more on longer edits. Now the audio is exactly twice as long as your edit.
-- **No dropped frames from Topaz.** Topaz writes a couple of broken timestamps in its 120 fps files, and two frames got dropped. Every frame is kept now, perfectly even, for both Halftime and 60 fps.
+- **Halftime plays at normal speed (1.4.2).** It used to play at half speed to show every frame on its own. Now each pair of 120 fps frames becomes one blended 60 fps frame, so the speed and the audio stay exactly as you edited them.
+- **No dropped frames from Topaz (1.4.1).** Topaz writes a couple of broken timestamps in its 120 fps files, and two frames got dropped. Every frame is kept now, perfectly even, for both Halftime and 60 fps.
 
 ### Changed
 
