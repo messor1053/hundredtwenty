@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.3.0 · November 6, 2026
+
+**This installs itself.** It downloads in the background, then the title bar shows **Update ready · Restart**.
+
+On November 3 TikTok changed how it processes uploads, and the 120fps methods stopped working for everyone. This update adds a temporary method while we work on a fix.
+
+### New
+
+- **Patch method (temporary).** The new default. It exports at 120fps, then stretches the file's timing so TikTok keeps every frame. The exported file plays slowed on PC, that is expected. Upload it from a PC browser and don't re-export it. It's temporary: it will be replaced as soon as we have a fix.
+- **Method card.** Patch shows a **Temporary** badge. **Studio** is grayed out and marked **Maintenance** until it works on TikTok again.
+
+### Changed
+
+- **Old methods removed.** Pass, Method, Itsscale and 60 Clean stopped working with TikTok's change and are gone. Studio is under maintenance (grayed out, not clickable) until it works again.
+- **CPU encoding.** Exports run on the CPU (x264). The GPU (NVENC) switch is gone.
+
 ## 1.2.0 · October 27, 2026
 
 **On 1.1.0 this installs itself.** It downloads in the background, then the title bar shows **Update ready · Restart**. Still on 1.0.0? Run the 1.2.0 installer once.

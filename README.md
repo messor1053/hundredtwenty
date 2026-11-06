@@ -18,12 +18,10 @@ Hundred Twenty takes any edit, encodes it at a true 120fps with FFmpeg and preps
 ## Features
 
 - **Drop and export.** Drag in an MP4, MOV, MKV or WEBM, then hit Export.
-- **120 Studio.** Encodes true 120fps and writes the file so TikTok serves your original upload untouched. Tested on a public post: 120fps, every frame.
-- **Experimental methods.** Pass (CompressBase-style), Method (based on [ut0ku/120fps-method](https://github.com/ut0ku/120fps-method)) and Itsscale.
-- **60 Clean.** Plain 1080p60 for when you just want it to look right everywhere.
-- **GPU encoding.** NVIDIA NVENC at its highest-quality preset, with a CPU (x264) fallback.
-- **Tuned settings.** 120 Studio uses 1080×1920, H.264 Constrained Baseline L5.1, ~12 Mbps, AAC. A bitrate slider is there if you want more.
-- **2K and 4K.** Studio can keep a source bigger than 1080p sharper: **2K** (1440p, about 22 Mbps) works on TikTok right now; **4K** (2160p) is marked Risky and is patched right now. 1080p stays the default.
+- **Patch method (temporary).** TikTok changed how it processes uploads on November 3 and the old 120fps methods stopped working. Patch exports at 120fps, then stretches the file's timing so TikTok keeps every frame. The file plays slowed on PC, that is expected. It's temporary until we have a fix.
+- **Studio (maintenance).** The original 120 Studio method is grayed out until it works on TikTok again.
+- **Tuned settings.** 1080×1920 H.264 at about 12 Mbps with AAC audio. A bitrate slider is there if you want more.
+- **2K and 4K.** Keep a source bigger than 1080p sharper: **2K** (1440p, about 22 Mbps) or **4K** (2160p, marked Risky). 1080p stays the default.
 - **Output summary.** See the frame size, bitrate, encoder and an estimated file size before you export.
 - **Motion interpolation.** Builds real in-between frames for clips under 120fps.
 - **One-click TikTok.** Opens TikTok Studio in your browser with the caption already copied.
@@ -48,19 +46,19 @@ Make it yours. Pick a layout: **Classic**, **Steps** (one step at a time), **Pro
 2. Download **HundredTwenty-Setup-1.2.0.exe** (installer) or **HundredTwenty-1.2.0-portable.exe** (no install).
 3. Windows may show "Windows protected your PC" because the app isn't code-signed. Click **More info → Run anyway**.
 
-**Already installed?** 1.1.0 updates itself to 1.2.0: restart when the title bar says **Update ready**. On 1.0.0, run the 1.2.0 installer once. It closes the app, removes 1.0.0 and keeps your settings. See the [changelog](CHANGELOG.md).
+**Already installed?** 1.1.0 and later update themselves to 1.3.0: restart when the title bar says **Update ready**. On 1.0.0, run the 1.2.0 installer once. It closes the app, removes 1.0.0 and keeps your settings. See the [changelog](CHANGELOG.md).
 
 ## How to post at 120fps
 
 1. Export a **120fps** edit from your editor (After Effects, Premiere, CapCut…).
-2. Drop it into Hundred Twenty, keep **120 Studio**, hit **Export**.
+2. Drop it into Hundred Twenty, keep **Patch**, hit **Export**. The exported file plays slowed on PC, that is expected. Don't re-export it.
 3. Click **Open TikTok**. Drag the file in, press **Ctrl+V** for the caption, then **Post**.
-4. Watch it on a 120 Hz phone. TikTok serves the original file, so give it a few minutes after posting while TikTok checks it.
+4. Give it a few minutes after posting while TikTok processes it. Patch is temporary while we work on a fix for TikTok's change.
 
 ## Requirements
 
 - Windows 10 or 11 (64-bit)
-- NVIDIA GPU recommended (any CPU works with x264)
+- Any 64-bit CPU (exports use x264)
 
 ## Built with
 
