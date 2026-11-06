@@ -13,6 +13,7 @@ On November 3 TikTok changed how it processes uploads, and the 120fps methods st
 
 ### Changed
 
+- **Your edit keeps its shape.** **Original** framing is now the default: square, landscape and portrait edits stay that shape and are only scaled down to fit 1080p (2K and 4K keep more). Fit and Fill are still there if you want a 9:16 frame.
 - **Old methods removed.** Pass, Method, Itsscale and 60 Clean stopped working with TikTok's change and are gone. Studio is under maintenance (grayed out, not clickable) until it works again.
 - **CPU encoding.** Exports run on the CPU (x264). The GPU (NVENC) switch is gone.
 
