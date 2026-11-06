@@ -19,6 +19,11 @@ With both methods, TikTok shows 540p for the first 10 to 20 minutes after postin
 
 Since November 3, TikTok re-encodes a Studio export like any other upload. It shows 540p first, then 1080p 60 with every 2nd frame dropped. Halftime gets the same 1080p 60 and keeps all 120 frames. Studio comes back as soon as TikTok lets 120 fps through again.
 
+### Fixed (hot update 1.4.1)
+
+- **Halftime audio stays in sync.** The audio slowdown came out about 0.2% short, so the sound slowly ran ahead of the picture: about 45 ms by the end of a 24 second export, more on longer edits. Now the audio is exactly twice as long as your edit.
+- **No dropped frames from Topaz.** Topaz writes a couple of broken timestamps in its 120 fps files, and two frames got dropped. Every frame is kept now, perfectly even, for both Halftime and 60 fps.
+
 ### Changed
 
 - **The old Patch method is replaced.** TikTok played it at 540p and 20 fps, 6x slowed, with choppy audio.
