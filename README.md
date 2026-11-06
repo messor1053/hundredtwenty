@@ -45,10 +45,10 @@ Make it yours. Pick a layout: **Classic**, **Steps** (one step at a time), **Pro
 ## Install
 
 1. Go to [Releases](../../releases/latest).
-2. Download **HundredTwenty-Setup-1.2.0.exe** (installer) or **HundredTwenty-1.2.0-portable.exe** (no install).
+2. Download **HundredTwenty-Setup-1.4.0.exe** (installer) or **HundredTwenty-1.4.0-portable.exe** (no install).
 3. Windows may show "Windows protected your PC" because the app isn't code-signed. Click **More info → Run anyway**.
 
-**Already installed?** 1.1.0 and later update themselves to 1.4.0: restart when the title bar says **Update ready**. On 1.0.0, run the 1.2.0 installer once. It closes the app, removes 1.0.0 and keeps your settings. See the [changelog](CHANGELOG.md).
+**Already installed?** 1.1.0 and later update themselves to 1.4.0: restart when the title bar says **Update ready**. On 1.0.0, run the 1.4.0 installer once. It closes the app, removes 1.0.0 and keeps your settings. See the [changelog](CHANGELOG.md).
 
 ## How to post at 120fps
 
