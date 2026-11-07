@@ -19,6 +19,12 @@ With both methods, TikTok shows 540p for the first 10 to 20 minutes after postin
 
 Since November 3, TikTok re-encodes a Studio export like any other upload. It shows 540p first, then 1080p 60 with every 2nd frame dropped. Halftime gets the same 1080p 60 and blends all 120 frames in pairs instead. Studio comes back as soon as TikTok lets 120 fps through again.
 
+### New in hot update 1.4.6
+
+- **FFMPEG: Double duration.** The FFMPEG section now starts on **Double duration**, the classic ffmpeg method (`-itsscale 2`): your frames are copied untouched and every timestamp is doubled, so the video is twice as long and plays slowed. Every frame is placed exactly 1/60 s apart (the broken timestamps in Topaz files are fixed without re-encoding), the audio is slowed to match by default (**Original** and **Normal** are still there), and Motion interpolation builds a 60 fps source up to 120 first. TikTok plays it 2x slow on every device; for normal speed use Halftime. **Re-encode** keeps every 1.4.5 setting.
+- **Faster fixes.** Small fixes for your version can now arrive in the background without a new version number: the title bar shows **Fix ready · Restart**. A fix that doesn't start properly rolls itself back.
+- **Privacy.** Anonymous stats now also send your device's time zone. The server only compares it with where the connection comes from and doesn't store it.
+
 ### New in hot update 1.4.5
 
 - **Halftime versions.** Halftime now has a Version switch: **R12** (the default, the same export Halftime always made), **R11** (the same 12 Mbps with x264's standard adaptive quantisation) and **R9** (constant quality, CRF 14). All three were tested on TikTok with the same edit and kept every frame at 1080p 60.

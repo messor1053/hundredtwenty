@@ -20,7 +20,7 @@ Hundred Twenty takes any edit, encodes it with FFmpeg and preps it for TikTok. Y
 - **Drop and export.** Drag in an MP4, MOV, MKV or WEBM, then hit Export.
 - **Halftime (the default).** TikTok changed how it processes uploads on November 3: it re-encodes everything and plays it at 60 fps at most. Halftime uses all of your 120fps frames anyway: each pair is blended into one 60 fps frame at 1080p, at your edit's own speed, so motion looks smoother than dropping half of them. Pick a version: **R12** (the default), **R11** or **R9** (constant quality).
 - **Clearframe.** Halftime's smooth 1080p 60 saved as 10-bit HEVC, using your NVIDIA GPU when you have one: the smallest upload for the same result on TikTok.
-- **FFMPEG section.** Choose everything yourself: 1080p 60 or 1080p 120, x264, x265 or NVIDIA NVENC (H.264, HEVC, AV1), quality, bitrate or 2-pass, MP4, MOV, MKV or AVI. Shows the exact command, and Frame check tells you whether a video's frame rate is real or padded with repeated frames. 1080p 120 only uses real 120fps frames.
+- **FFMPEG section.** Starts on **Double duration**, the classic `-itsscale 2` method: frames copied untouched, twice as long, every frame exactly 1/60 s apart, audio slowed to match (it plays slowed, on TikTok too). Or **Re-encode** and choose everything yourself: 1080p 60 or 1080p 120, x264, x265 or NVIDIA NVENC (H.264, HEVC, AV1), quality, bitrate or 2-pass, MP4, MOV, MKV or AVI. Shows the exact command, and Frame check tells you whether a video's frame rate is real or padded with repeated frames. 1080p 120 only uses real 120fps frames.
 - **60 fps.** Normal speed at 1080p 60 fps. A 120fps edit keeps every 2nd frame, so motion stays even.
 - **Studio (maintenance).** The original 120 Studio method needs TikTok to keep the original file, which it stopped doing on November 3. It's grayed out until that works again. Right now TikTok drops every 2nd frame of a Studio export, while Halftime blends them into the motion.
 - **Tuned settings.** 1080×1920 H.264 at about 12 Mbps with AAC audio. A bitrate slider is there if you want more.
@@ -82,7 +82,7 @@ The source code is private, so GitHub's language bar stays empty here. These sha
 
 ## Privacy
 
-Hundred Twenty sends anonymous usage stats: a random install ID, the app version, your Windows version, the export mode you used and your country (worked out by the server; your IP address is never stored). It never sends files, file names or account details. Turn it off in Settings → Privacy.
+Hundred Twenty sends anonymous usage stats: a random install ID, the app version, your Windows version, the export mode you used, your country (worked out by the server; your IP address is never stored) and your device's time zone (only compared with where the connection comes from, never stored). It never sends files, file names or account details. Turn it off in Settings → Privacy.
 
 ## Notes
 
