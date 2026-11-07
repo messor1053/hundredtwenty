@@ -19,6 +19,14 @@ With both methods, TikTok shows 540p for the first 10 to 20 minutes after postin
 
 Since November 3, TikTok re-encodes a Studio export like any other upload. It shows 540p first, then 1080p 60 with every 2nd frame dropped. Halftime gets the same 1080p 60 and blends all 120 frames in pairs instead. Studio comes back as soon as TikTok lets 120 fps through again.
 
+### New in hot update 1.4.5
+
+- **Halftime versions.** Halftime now has a Version switch: **R12** (the default, the same export Halftime always made), **R11** (the same 12 Mbps with x264's standard adaptive quantisation) and **R9** (constant quality, CRF 14). All three were tested on TikTok with the same edit and kept every frame at 1080p 60.
+- **Clearframe.** A new method built from our own TikTok tests: Halftime's smooth 1080p 60 saved as 10-bit HEVC, using your NVIDIA GPU when you have one. The same edit uploaded seven different ways came out within a fraction of a point on TikTok, and 10-bit HEVC got there from the smallest file, so it uploads faster and exports in seconds.
+- **FFMPEG section.** Pick FFMPEG as the method to choose everything yourself: 1080p 60 or 1080p 120, x264, x265 or NVIDIA NVENC (H.264, HEVC, AV1), quality, bitrate or 2-pass, MP4, MOV, MKV or AVI, 10-bit, and blending 120 down to 60. It shows the exact ffmpeg command, and **Frame check** tells you whether your video's frame rate is real or padded with repeated frames. 1080p 120 is only built from real 120 fps frames, never duplicated ones. TikTok plays 60 fps at most right now, so 1080p 120 is for other platforms and your archive.
+- **TikTok optimiser.** Off by default, under Extras. Makes Halftime R12 and 60 fps files smaller with every frame and the same frame rate, checked frame by frame against your edit (16.5 MB down to 10.9 MB on a Topaz edit, quality 98.6). TikTok re-encodes every upload anyway, so it's about a smaller, faster upload.
+- **Framing tips.** Hover Original, Fit or Fill to see what each does: Fill zooms a square or wide edit to 9:16 and cuts off the sides.
+
 ### Fixed (hot updates 1.4.1 to 1.4.4)
 
 - **No slow motion (1.4.2 to 1.4.4).** Halftime briefly played your edit slowed down to show every frame, and 1.4.3 had a Speed switch for it. TikTok plays any slowed file as slow motion on every device, so it's gone: Halftime always plays at your edit's own speed.
