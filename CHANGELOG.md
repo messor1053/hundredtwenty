@@ -8,7 +8,7 @@ On November 3 TikTok changed how it processes uploads. It now re-encodes every v
 
 ### New
 
-- **Halftime method.** The new default, marked with the star, with two speeds. **Half speed** (the default, best for 120 fps and quality) shows every one of your 120 fps frames at 1080p 60, so the edit plays twice as long with the audio slowed to match. A 20 second edit becomes 40 seconds, not 2 minutes like the old Patch. **Normal speed** blends each pair of frames into one 60 fps frame at your edit's length.
+- **Halftime method.** The new default, marked with the star. It builds your edit at 120 fps and blends each pair of frames into one 60 fps frame at 1080p, so the edit keeps its own speed and motion looks smoother than when half the frames are dropped.
 - **60 fps method.** Normal speed at 1080p 60 fps. A 120 fps edit keeps every 2nd frame, so motion stays perfectly even.
 - **Ten new styles.** Luxe, Prism, Chrome, Soft, Clay, Paper, Blueprint, HUD, Brutal and Swiss, plus **Surprise me** for a random style and accent. That makes 14 styles, and every one works with every layout, theme and accent.
 - **Premium touches.** A short launch intro, subtle film grain, keyboard focus rings and toasts with a timer bar. There are also keyboard shortcuts, listed in Settings: **Ctrl+O** to open, **Ctrl+E** to export and **Ctrl+,** for settings.
@@ -17,12 +17,12 @@ With both methods, TikTok shows 540p for the first 10 to 20 minutes after postin
 
 ### Halftime vs Studio right now
 
-Since November 3, TikTok re-encodes a Studio export like any other upload. It shows 540p first, then 1080p 60 with every 2nd frame dropped. Halftime gets the same 1080p 60 and keeps all 120 frames at half speed, or blends them in pairs at normal speed. Studio comes back as soon as TikTok lets 120 fps through again.
+Since November 3, TikTok re-encodes a Studio export like any other upload. It shows 540p first, then 1080p 60 with every 2nd frame dropped. Halftime gets the same 1080p 60 and blends all 120 frames in pairs instead. Studio comes back as soon as TikTok lets 120 fps through again.
 
-### Fixed (hot updates 1.4.1 to 1.4.3)
+### Fixed (hot updates 1.4.1 to 1.4.4)
 
-- **Halftime Speed switch (1.4.3).** Pick **Half speed** (the default, best for 120 fps and quality) or **Normal speed** (each pair of 120 fps frames blended into one 60 fps frame).
-- **Half-speed audio stays in sync (1.4.1).** The slowed audio used to come out about 0.2% short and drift ahead of the picture: about 45 ms by the end of a 24 second export, more on longer edits. Now it's exactly twice as long as your edit.
+- **No slow motion (1.4.2 to 1.4.4).** Halftime briefly played your edit slowed down to show every frame, and 1.4.3 had a Speed switch for it. TikTok plays any slowed file as slow motion on every device, so it's gone: Halftime always plays at your edit's own speed.
+- **Audio stays in sync (1.4.1).** The slowed audio of the old half-speed export used to drift ahead of the picture. Halftime no longer slows anything, so your audio is exactly as you edited it.
 - **No dropped frames from Topaz (1.4.1).** Topaz writes a couple of broken timestamps in its 120 fps files, and two frames got dropped. Every frame is kept now, perfectly even, for both Halftime and 60 fps.
 
 ### Changed

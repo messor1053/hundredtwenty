@@ -18,9 +18,9 @@ Hundred Twenty takes any edit, encodes it with FFmpeg and preps it for TikTok. Y
 ## Features
 
 - **Drop and export.** Drag in an MP4, MOV, MKV or WEBM, then hit Export.
-- **Halftime (the default).** TikTok changed how it processes uploads on November 3: it re-encodes everything and plays it at 60 fps at most. Halftime still uses every one of your 120fps frames at 1080p. **Half speed** (the default, best for 120fps and quality) shows every frame at 60 fps, so the edit plays twice as long with the audio slowed to match. **Normal speed** blends each pair of frames into one 60 fps frame at your edit's length.
+- **Halftime (the default).** TikTok changed how it processes uploads on November 3: it re-encodes everything and plays it at 60 fps at most. Halftime uses all of your 120fps frames anyway: each pair is blended into one 60 fps frame at 1080p, at your edit's own speed, so motion looks smoother than dropping half of them.
 - **60 fps.** Normal speed at 1080p 60 fps. A 120fps edit keeps every 2nd frame, so motion stays even.
-- **Studio (maintenance).** The original 120 Studio method needs TikTok to keep the original file, which it stopped doing on November 3. It's grayed out until that works again. Right now TikTok drops every 2nd frame of a Studio export, while Halftime keeps them all.
+- **Studio (maintenance).** The original 120 Studio method needs TikTok to keep the original file, which it stopped doing on November 3. It's grayed out until that works again. Right now TikTok drops every 2nd frame of a Studio export, while Halftime blends them into the motion.
 - **Tuned settings.** 1080×1920 H.264 at about 12 Mbps with AAC audio. A bitrate slider is there if you want more.
 - **1080p.** TikTok shows uploads at up to 1080p right now. 2K and 4K exports are still there for sources bigger than 1080p, but TikTok scales them down to 1080p.
 - **Output summary.** See the frame size, bitrate, encoder and an estimated file size before you export.
@@ -53,7 +53,7 @@ Make it yours. Pick a layout: **Classic**, **Steps** (one step at a time), **Pro
 ## How to post at 120fps
 
 1. Export a **120fps** edit from your editor (After Effects, Premiere, CapCut…).
-2. Drop it into Hundred Twenty, keep **Halftime** at **Half speed** for every frame (or pick **Normal speed**, or **60 fps** for crisp frames at normal speed), hit **Export**. Don't re-export the file.
+2. Drop it into Hundred Twenty, keep **Halftime** (or pick **60 fps** for crisp frames without blending), hit **Export**. Don't re-export the file.
 3. Click **Open TikTok**. Drag the file in, press **Ctrl+V** for the caption, then **Post**.
 4. TikTok shows 540p for the first 10 to 20 minutes, then switches to 1080p 60.
 
