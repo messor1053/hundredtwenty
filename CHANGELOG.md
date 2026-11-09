@@ -25,6 +25,8 @@ Since November 3, TikTok re-encodes a Studio export like any other upload. It sh
 - **Faster fixes.** Small fixes for your version can now arrive in the background without a new version number: the title bar shows **Fix ready · Restart**. A fix that doesn't start properly rolls itself back.
 - **Privacy.** Anonymous stats now also send your device's time zone. The server only compares it with where the connection comes from and doesn't store it.
 
+**Fix 1 for 1.4.6 (November 9):** the FFMPEG section is now just **60 fps** or **120 fps**, picked from your video. It's always the classic `-itsscale 2` method: your frames copied untouched and every timestamp doubled, with every frame exactly evenly spaced. The Double duration / Re-encode switch, the audio choice and Frame check are gone. The title bar shows **1.4.6 (fix 1)** once it's in.
+
 ### New in hot update 1.4.5
 
 - **Halftime versions.** Halftime now has a Version switch: **R12** (the default, the same export Halftime always made), **R11** (the same 12 Mbps with x264's standard adaptive quantisation) and **R9** (constant quality, CRF 14). All three were tested on TikTok with the same edit and kept every frame at 1080p 60.
