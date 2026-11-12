@@ -1,5 +1,27 @@
 # Changelog
 
+## 1.5.0 · November 12, 2026
+
+**This installs itself.** It downloads in the background, then the title bar shows **Update ready · Restart**.
+
+**Studio is back, and it is true 120 fps again.** Since November 3 TikTok re-encoded every upload and capped it at 60 fps. Studio now writes the file with a new container patch, and TikTok keeps it exactly as uploaded. Tested on a public post on November 12: TikTok served the original 1080p file at 120 fps, every frame, right after posting.
+
+### New
+
+- **Studio, rebuilt.** The default again, marked with the star. Your edit is encoded at true 120 fps (H.264 High, about 12 Mbps, AAC stereo) and the file gets the new patch: a short silent tail on the sound and a second copy of the audio track. The picture is not touched by the patch.
+- **120 fps right away.** No waiting for TikTok to process a better copy: the original 1080p 120 fps file is what plays.
+- **Videos without sound work too.** Studio needs a sound track, so a silent one is added when your edit has none or Audio is off.
+
+### Changed
+
+- **Halftime, Clearframe, 60 fps and FFMPEG stay** as they were, for 60 fps uploads. Halftime no longer carries the star.
+- **Resolution.** The new Studio is tested at 1080p. 2K and 4K are still there, but not tested with it yet.
+
+### Good to know
+
+- Upload from a PC browser and don't re-export the file.
+- This is an unofficial method. It passed one public test so far, and TikTok can change how it handles uploads at any time, like it did on November 3.
+
 ## 1.4.0 · November 6, 2026
 
 **This installs itself.** It downloads in the background, then the title bar shows **Update ready · Restart**.
